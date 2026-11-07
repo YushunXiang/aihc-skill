@@ -2,7 +2,7 @@
 
 面向 AI 编程助手的百度百舸 AIHC CLI 使用技能。支持环境配置、资源池与队列查询、训练任务、开发机、推理服务及 OpenAPI 透传。
 
-## 安装
+## 安装 Skill
 
 将本仓库的 `aihc-cli/` 目录复制到支持 SKILL.md 的助手技能目录。例如 Codex：
 
@@ -12,6 +12,17 @@ cp -R aihc-cli "${CODEX_HOME:-$HOME/.codex}/skills/aihc-cli"
 ```
 
 若目标已存在，先检查已有内容，避免嵌套复制或覆盖个人修改。使用前按百度官方文档安装 `aihc` 并在本地配置账号；不向聊天或仓库提交 AK/SK。
+
+## 安装 AIHC CLI
+
+Skill 依赖独立的 `aihc` 可执行程序。首次安装请按[安装与配置指南](aihc-cli/references/setup.md)操作，其中包含：
+
+- Linux/macOS 自动识别 amd64/arm64 的 Bash 下载与用户目录安装命令。
+- Windows amd64 的 PowerShell 安装命令。
+- 当前会话及持久 PATH 配置、版本验证、常见安装问题。
+- 本地凭证配置和多配置文件选择规则。
+
+示例固定为已核验的 v1.6.5；需要其他版本时先核对[官方安装页](https://cloud.baidu.com/doc/AIHC/s/em7x6wb9v)。安装后运行 `aihc version` 和 `aihc --help`，再通过本地 `aihc config` 配置账号。能显示帮助不代表已获得云端访问权限。
 
 ## 使用示例
 
