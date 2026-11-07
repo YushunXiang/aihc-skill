@@ -1,0 +1,9 @@
+# Local credentials and runtime output
+.aihc/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+__pycache__/
+.DS_Store
